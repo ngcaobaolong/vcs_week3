@@ -20,19 +20,6 @@
 #define _XOPEN_SOURCE
 #include <unistd.h>
 
-#define PWDIR_PARAM	"pwdir"
-#define PWDIR_DEFAULT	"/var/log"
-#define PWDIR_LEN 	256
-#define BUF_MAX		256
-
-#define DEBUG
-
-#ifdef DEBUG
-# define D(a) a;
-#else
-# define D(a) {}
-#endif
-
 /* expected hook for auth service */
 PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags,
 				   int argc, const char **argv) {
